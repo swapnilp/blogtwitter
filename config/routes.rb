@@ -1,5 +1,9 @@
 Blogtwitter::Application.routes.draw do
+  match '/auth/:provider/callback' => 'authentications#create'
+  resources :authentications
+
   devise_for :users
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
