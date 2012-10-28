@@ -1,11 +1,23 @@
 <h1>Articles</h1>
-<ul>
-  <% @articles.each do |article| %>
-  <li>
-    <%= link_to article.name, article_path(article) %>
-  </li>
+<div class="span6">
+  <ul>
+    <% @articles.each do |article| %>
+    <li>
+      <%= link_to article.name, article_path(article) %>
+    </li>
+    <% end %>
+  </ul>
+  <div id="newarticle">
+    <%= link_to "new Article", new_article_path, :remote => :true , :class => 'btn'%>
+  </div>
+</div>
+<div class="span6">
+  <% if !@user.authentications.blank? %>
+    <div id="tweets"></div>
+    <script>
+      jQuery(function($) {
+      $("#tweets").liveTwitter('<%= @user.authentications.first.name %>');
+      })
   <% end %>
-</ul>
-<div id="newarticle">
-<%= link_to "new Article", new_article_path, :remote => :true , :class => 'btn'%>
+    </script>
 </div>
