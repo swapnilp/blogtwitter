@@ -1,0 +1,7 @@
+<%= form_for @post, :as => :post, :url => article_post_path(@article, @post), :html => { :class => "new_post" } do |f| %>
+
+  <div><%= f.label :post %><br />
+  <%= f.text_field :post %></div>
+
+  <div><%= f.submit "Post" %></div>
+<% end %>

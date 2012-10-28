@@ -1,0 +1,16 @@
+<h1><%= @article.name %></h1>
+<h3><%= @article.description %></h3>
+
+<div>
+  <ul>
+    <% @article.posts.each do |post| %>
+    <li>
+      <%= post.post %>
+    </li>
+    <% end %>
+  </ul>
+</div>
+<div id="newpost">
+  <%= link_to "New Post", new_article_post_path(@article) , :remote => :true,  :class => "btn" %>
+</div>
+<%= link_to "Back", articles_path, :class => 'btn' %>

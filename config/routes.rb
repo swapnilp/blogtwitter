@@ -1,7 +1,9 @@
 Blogtwitter::Application.routes.draw do
   match '/auth/:provider/callback' => 'authentications#create'
   resources :authentications
-
+  resources :articles do
+    resource :post
+  end
   devise_for :users
 
 
