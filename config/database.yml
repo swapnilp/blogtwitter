@@ -1,11 +1,11 @@
 shared: &shared
   adapter: postgresql
   encoding: utf8
-  reconnect: false
+  reconnect: true
   pool: 5
-  username: postgres
-  password: swapnil
-  socket: /var/run/mysqld/mysqld.sock
+  username: root
+  password: swapnilp
+#  socket: /var/run/mysqld/mysqld.sock
 
 development:
   <<: *shared
