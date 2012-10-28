@@ -5,7 +5,7 @@ gem 'rails', '3.2.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-#gem 'mysql2'
+# gem 'mysql2'
 gem 'pg'
 gem 'devise'
 gem 'nifty-generators'
@@ -46,4 +46,4 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
-gem "mocha", :group => :test
+#gem "mocha", :group => :test
