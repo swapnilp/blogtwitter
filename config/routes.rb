@@ -4,7 +4,7 @@ Blogtwitter::Application.routes.draw do
   resources :articles do
     resource :post
   end
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => 'registrations', :sessions => 'sessions'}
 
 
   # The priority is based upon order of creation:
